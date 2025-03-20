@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newflutterproject/charge_page.dart';
 
 class WelcomePage2 extends StatefulWidget {
   const WelcomePage2({super.key});
@@ -207,6 +208,18 @@ class _MyWidgetState extends State<WelcomePage2> {
             Text(
               'Output: $_output',
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            FloatingActionButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChargingDetailsPage(),
+                  ),
+                );
+              },
+              child: const Text("Charge"),
             ),
           ],
         ),
